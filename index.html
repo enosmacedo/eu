@@ -6,7 +6,7 @@
     <title data-lang="docTitle">Portfolio of Daniel Macedo</title>
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,19 +68,36 @@
         .lang-switcher .btn {
             font-size: 0.8rem;
         }
-        /* Ajuste para o carrossel dentro do cartão */
+        /* Carousel adjustment inside card */
         .carousel-item img {
             object-fit: cover;
             height: 250px;
         }
-        /* Mudança de cor das setas do carrossel para preto */
+        /* Change carousel arrows color to black */
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             filter: invert(100%);
         }
-        /* Opcional: Mudança de cor dos indicadores para preto */
+        /* Indicators to black */
         .carousel-indicators [data-bs-target] {
             background-color: #000;
+        }
+        /* Registry list style */
+        .registry-item {
+            background: #fff;
+            border-left: 4px solid #0d6efd;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .registry-number {
+            font-family: monospace;
+            background: #eef2ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #0d6efd;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -148,74 +165,70 @@
                 <h2 class="display-5 fw-bold section-title" data-lang="projectsTitle">My Projects</h2>
                 <p class="lead text-muted" data-lang="projectsSubtitle">Here are some of the works I am most proud of.</p>
             </div>
-            <div class="row gy-4">
+            
+            <!-- Principal Projects Cards -->
+            <div class="row gy-4 mb-5">
                 <!-- Project 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
                         <img src="img/viajaAi.png" class="card-img-top" alt="Project 1 Image" data-alt-lang="project1Alt">
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bold" data-lang="project1Title">...</h5>
-                            <p class="card-text text-muted" data-lang="project1Desc">...</p>
-                            <!-- <a href="#" class="btn btn-primary mt-auto" data-lang="project1Btn">View Details</a> -->
-                            <p class="lead" data-lang="project1Btn">...</p>
+                            <h5 class="card-title fw-bold" data-lang="project1Title">ViajarIA</h5>
+                            <p class="card-text text-muted" data-lang="project1Desc">ViajarIA is an innovative PoC that demonstrates the power of voice interfaces and AI...</p>
+                            <p class="lead small fw-bold mt-3" data-lang="project1Btn">Contact us to gain access to the system.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
-                        <!-- Carrossel de Imagens -->
                         <div id="project2Carousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="3"></button>
+                                <button type="button" data-bs-target="#project2Carousel" data-bs-slide-to="4"></button>
                             </div>
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="img/nordestebot1.jpeg" class="d-block w-100" alt="Slide 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/nordestebot2.jpeg" class="d-block w-100" alt="Slide 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/nordestebot3.jpeg" class="d-block w-100" alt="Slide 3">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/nordestebot4.jpeg" class="d-block w-100" alt="Slide 4">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/nordestebot5.jpeg" class="d-block w-100" alt="Slide 5">
-                                </div>
+                                <div class="carousel-item active"><img src="img/nordestebot1.jpeg" class="d-block w-100" alt="Slide 1"></div>
+                                <div class="carousel-item"><img src="img/nordestebot2.jpeg" class="d-block w-100" alt="Slide 2"></div>
+                                <div class="carousel-item"><img src="img/nordestebot3.jpeg" class="d-block w-100" alt="Slide 3"></div>
+                                <div class="carousel-item"><img src="img/nordestebot4.jpeg" class="d-block w-100" alt="Slide 4"></div>
+                                <div class="carousel-item"><img src="img/nordestebot5.jpeg" class="d-block w-100" alt="Slide 5"></div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#project2Carousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#project2Carousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Próximo</span>
-                            </button>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#project2Carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#project2Carousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
                         </div>
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bold" data-lang="project2Title">...</h5>
-                            <p class="card-text text-muted" data-lang="project2Desc">A brief description of the project, the technologies used (e.g., HTML, CSS, JavaScript, Bootstrap), and the main goal.</p>
-                            <!-- <a href="#" class="btn btn-primary mt-auto" data-lang="project2Btn">View Source Code</a> -->
-                            <p class="lead" data-lang="project2Btn">...</p>
+                            <h5 class="card-title fw-bold" data-lang="project2Title">Nordeste Bot</h5>
+                            <p class="card-text text-muted" data-lang="project2Desc">NordesteBot is a web platform that allows the instant creation of chatbots...</p>
+                            <p class="lead small fw-bold mt-3" data-lang="project2Btn">Contact us to gain access to the system.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
+                <!-- Project 3 Placeholder -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://placehold.co/600x400/CCCCCC/FFFFFF?text=Project+3" class="card-img-top" alt="Project 3 Image" data-alt-lang="project3Alt">
+                        <div class="bg-light d-flex align-items-center justify-content-center" style="height: 250px;">
+                            <span class="text-muted">Coming Soon</span>
+                        </div>
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bold" data-lang="project3Title">...</h5>
-                            <p class="card-text text-muted" data-lang="project3Desc">A brief description of the project, the technologies used (e.g., Java, Spring Boot, PostgreSQL), and the main goal.</p>
+                            <h5 class="card-title fw-bold" data-lang="project3Title">Upcoming Project</h5>
+                            <p class="card-text text-muted" data-lang="project3Desc">Research and development of new scalable AI tools.</p>
                             <a href="#" class="btn btn-primary mt-auto" data-lang="project3Btn">Access Demo</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Software Registries Subsection -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <hr class="mb-5">
+                    <h3 class="fw-bold mb-4" data-lang="softwareTitle">Software Registries (Intellectual Property)</h3>
+                    <div id="registryList">
+                        <!-- Items populated via JS for better bilingual management -->
                     </div>
                 </div>
             </div>
@@ -340,7 +353,7 @@
     </footer>
 
     <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Language Switcher Script -->
     <script>
@@ -359,17 +372,22 @@
                 projectsTitle: "My Projects",
                 projectsSubtitle: "Here are some of the works I am most proud of.",
                 project1Title: "ViajarIA",
-                project1Desc: "ViajarIA is an innovative proof of concept that demonstrates the power of voice interfaces and AI. Our system interprets your travel requests in natural language, queries multiple data sources like Duffel (API) and Airbnb (via MCP agents), and presents the best options for you. All in a fast and intuitive way.",
+                project1Desc: "ViajarIA is an innovative proof of concept that demonstrates the power of voice interfaces and AI. Our system interprets your travel requests in natural language, queries multiple data sources like Duffel (API) and Airbnb (via MCP agents), and presents the best options for you.",
                 project1Btn: "Contact us to gain access to the system.",
                 project1Alt: "Project 1 Image",
                 project2Title: "Nordeste Bot",
-                project2Desc: "NordesteBot is a web platform that allows the instant creation of chatbots for WhatsApp, powered by LLMs and the RAG architecture. In other words, the bot responds to users using Generative AI, based on a specific and reliable data source provided by you. The process is surprisingly simple: 1- Upload a PDF file with the content you want. 2- Securely authenticate a WhatsApp number. That's it! The associated number becomes a bot specialized in the content of your PDF. Disconnecting is equally easy and can be done at any time through the system or through WhatsApp itself.",
+                project2Desc: "NordesteBot is a web platform that allows the instant creation of chatbots for WhatsApp, powered by LLMs and the RAG architecture. Users can upload a PDF and authenticate a number in seconds.",
                 project2Btn: "Contact us to gain access to the system.",
                 project2Alt: "Project 2 Image",
-                project3Title: "....",
-                project3Desc: "....",
+                project3Title: "Upcoming AI Tools",
+                project3Desc: "Research and development of new scalable AI tools for various industries.",
                 project3Btn: "Access Demo",
                 project3Alt: "Project 3 Image",
+                softwareTitle: "Software Registries (Intellectual Property)",
+                regType: "Computer Program",
+                regInst: "INPI - National Institute of Industrial Property",
+                regNumber: "Registration Number",
+                regDate: "Registration Date",
                 educationTitle: "Academic Background",
                 phdTitle: "PhD in Electrical Engineering",
                 phdUniversity: "Federal University of Campina Grande (UFCG)",
@@ -427,17 +445,22 @@
                 projectsTitle: "Meus Projetos",
                 projectsSubtitle: "Aqui estão alguns dos trabalhos que mais me orgulho.",
                 project1Title: "ViajarIA",
-                project1Desc: "ViajarIA é uma PoC inovadora que demonstra o poder das interfaces de voz e da IA. O sistema interpreta suas solicitações de viagem em linguagem natural, consulta diversas fontes de dados como Duffel (API) e Airbnb (via agentes MCP) e apresenta as melhores opções para você. Tudo de forma rápida e intuitiva.",
+                project1Desc: "ViajarIA é uma PoC inovadora que demonstra o poder das interfaces de voz e da IA. O sistema interpreta suas solicitações de viagem em linguagem natural, consulta diversas fontes de dados como Duffel (API) e Airbnb e apresenta as melhores opções.",
                 project1Btn: "Entre em contato comigo para solicitar o acesso.",
                 project1Alt: "Imagem do Projeto 1",
                 project2Title: "NordesteBot",
-                project2Desc: "NordesteBot é uma plataforma web que permite a criação instantânea de chatbots para WhatsApp, com tecnologia LLMs e arquitetura RAG. Em outras palavras, o bot responde aos usuários usando Inteligência Artificial Generativa, baseada em uma fonte de dados específica e confiável fornecida por você. O processo é surpreendentemente simples: 1- Envie um arquivo PDF com o conteúdo desejado. 2- Autentique um número de WhatsApp com segurança. Pronto! O número associado se torna um bot especializado no conteúdo do seu PDF. Desconectar é igualmente fácil e pode ser feito a qualquer momento pelo sistema ou pelo próprio WhatsApp.",
+                project2Desc: "NordesteBot é uma plataforma web que permite a criação instantânea de chatbots para WhatsApp, com tecnologia LLMs e arquitetura RAG. Usuários podem subir um PDF e autenticar um número em segundos.",
                 project2Btn: "Entre em contato comigo para solicitar o acesso.",
                 project2Alt: "Imagem do Projeto 2",
-                project3Title: "[Nome do Projeto 3]",
-                project3Desc: "...",
+                project3Title: "Próximas Ferramentas de IA",
+                project3Desc: "Pesquisa e desenvolvimento de novas ferramentas de IA escaláveis para diversas indústrias.",
                 project3Btn: "Acessar Demo",
                 project3Alt: "Imagem do Projeto 3",
+                softwareTitle: "Registros de Software (Propriedade Intelectual)",
+                regType: "Programa de Computador",
+                regInst: "INPI - Instituto Nacional da Propriedade Industrial",
+                regNumber: "Número do registro",
+                regDate: "Data de registro",
                 educationTitle: "Formação Acadêmica",
                 phdTitle: "Doutorado em Engenharia Elétrica",
                 phdUniversity: "Universidade Federal de Campina Grande (UFCG)",
@@ -483,6 +506,67 @@
             }
         };
 
+        const registries = [
+            {
+                authors: "MACEDO, D. E. C. R.; ARAUJO, A. V. P. R. ; Jackson Sousa ; DUTRA, J. L. A. ; SANTOS, P. H. L. ; COSTA, J. J. L.",
+                title: "SGF - Sistema de gerenciamento de facção",
+                year: "2018",
+                number: "BR512019002476-1",
+                date: "31/12/2018"
+            },
+            {
+                authors: "MACEDO, D. E. C. R.; MEDEIROS, B. E. S. ; SOUZA JUNIOR, F. C. ; GARCIA, I. P.",
+                title: "BR512020000275-7",
+                year: "2019",
+                number: "BR512020000275-7",
+                date: "02/12/2019"
+            },
+            {
+                authors: "MACEDO, D. E. C. R.; SANTOS, D. F. S. ; PERKUSICH, A.",
+                title: "SimulatorFL - Um software de simulação de algoritmos de coordenação de aprendizagem federada",
+                year: "2024",
+                number: "BR512024002095-0",
+                date: "01/04/2024"
+            },
+            {
+                authors: "MACEDO, D. E. C. R.",
+                title: "XAI Eval - Um software para explicação de IA.",
+                year: "2025",
+                number: "BR512025004878-5",
+                date: "07/10/2025"
+            },
+            {
+                authors: "MACEDO, D. E. C. R.",
+                title: "MQTT-FL - Um framework para treinamento federado via protocolo MQTT",
+                year: "2025",
+                number: "BR512025001015-0",
+                date: "01/01/2025"
+            }
+        ];
+
+        function renderRegistries(lang) {
+            const container = document.getElementById('registryList');
+            container.innerHTML = '';
+            
+            registries.forEach(reg => {
+                const item = document.createElement('div');
+                item.className = 'registry-item';
+                item.innerHTML = `
+                    <div class="small text-muted mb-1">${reg.authors}. <strong>${reg.year}</strong>.</div>
+                    <h5 class="fw-bold mb-2">${reg.title}</h5>
+                    <div class="small">
+                        <span class="badge bg-secondary me-2">${translations[lang].regType}</span>
+                        <span class="text-muted">| ${translations[lang].regInst}</span>
+                    </div>
+                    <div class="mt-2 small">
+                        <strong>${translations[lang].regNumber}:</strong> <span class="registry-number">${reg.number}</span> | 
+                        <strong>${translations[lang].regDate}:</strong> ${reg.date}
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
         function changeLanguage(lang) {
             document.documentElement.lang = lang;
             const elements = document.querySelectorAll('[data-lang]');
@@ -500,13 +584,13 @@
                     el.setAttribute('alt', translations[lang][key]);
                 }
             });
+
+            renderRegistries(lang);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Set default language to English
             changeLanguage('en');
         });
-
     </script>
 </body>
 </html>
